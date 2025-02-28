@@ -61,7 +61,7 @@ public class SwerveJoystickCmd extends Command {
     // Get joystick inputs for forward, strafe, and rotation
     double xSpeed = forwardX.getAsDouble();
     double ySpeed = forwardY.getAsDouble();
-    double rot = -rotation.getAsDouble();
+    double rot = rotation.getAsDouble();
 
     xSpeed = applyDeadbandAndLimiter(xSpeed, X_DEADBAND, xLimiter, DriveTrainConstants.maxVelocity);
     ySpeed = applyDeadbandAndLimiter(ySpeed, Y_DEADBAND, yLimiter, DriveTrainConstants.maxVelocity);
