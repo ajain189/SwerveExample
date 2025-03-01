@@ -100,12 +100,12 @@ public final class Constants {
     public static final int frontRightDriveMotorId = 8;
     public static final int frontRightRotationMotorId = 7;
     public static final int frontRightCanCoderId = 12;
-    public static final double frontRightOffsetRad = 0.038330 * 2 * Math.PI;
+    public static final double frontRightOffsetRad = 0.043213 * 2 * Math.PI;
     // back left
     public static final int backLeftDriveMotorId = 5;
     public static final int backLeftRotationMotorId = 6;
     public static final int backLeftCanCoderId = 14;
-    public static final double backLeftOffsetRad = 0.245361 * 2 * Math.PI;
+    public static final double backLeftOffsetRad = 0.250488 * 2 * Math.PI;
     // back right
     public static final int backRightDriveMotorId = 4;
     public static final int backRightRotationMotorId = 3;

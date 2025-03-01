@@ -176,13 +176,16 @@ public class SwerveSubsystem extends SubsystemBase {
     odometry.update(getHeading(), getModulePositions());
 
     Logger.recordOutput("MyStates", getStates());
+    
+    Logger.recordOutput("NavX Heading", getHeading());
+    Logger.recordOutput("Pose", getPose());
 
     //Logger.recordOutput("ChassisSpeeds", speeds);
 
-    SmartDashboard.putNumber("frontLeft", frontLeft.getState().speedMetersPerSecond);
-    SmartDashboard.putNumber("frontRight", frontLeft.getState().speedMetersPerSecond);
-    SmartDashboard.putNumber("backLeft", frontLeft.getState().speedMetersPerSecond);
-    SmartDashboard.putNumber("backRight", frontLeft.getState().speedMetersPerSecond);
+    // SmartDashboard.putNumber("frontLeft", frontLeft.getState().speedMetersPerSecond);
+    // SmartDashboard.putNumber("frontRight", frontLeft.getState().speedMetersPerSecond);
+    // SmartDashboard.putNumber("backLeft", frontLeft.getState().speedMetersPerSecond);
+    // SmartDashboard.putNumber("backRight", frontLeft.getState().speedMetersPerSecond);
     // This method will be called once per scheduler run
   }
 }

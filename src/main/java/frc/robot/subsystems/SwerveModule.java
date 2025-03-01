@@ -4,6 +4,8 @@
 
 package frc.robot.subsystems;
 
+import org.littletonrobotics.junction.Logger;
+
 import com.ctre.phoenix6.hardware.CANcoder;
 import com.revrobotics.AbsoluteEncoder;
 import com.revrobotics.RelativeEncoder;
@@ -111,7 +113,9 @@ public class SwerveModule extends SubsystemBase {
     rotationMotor.set(rotationPIDController.calculate(getCANCoderRad(), state.angle.getRadians()));
 
     // Set the drive motor voltage using feedforward calculation
-    driveMotor.setVoltage(DriveTrainConstants.driveFF.calculate(state.speedMetersPerSecond));
+    //driveMotor.setVoltage(DriveTrainConstants.driveFF.calculate(state.speedMetersPerSecond));
+
+    driveMotor.set(state.speedMetersPerSecond/DriveTrainConstants.maxVelocity); 
   }
 
   // optimize function to prevent motor from turning more than 90 degrees
